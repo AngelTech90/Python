@@ -533,9 +533,9 @@ loton = (72,726,7273,75273)
 hola,papa,tu,como = loton 
 print(hola) 
     #*this printw 72 
- 
+
 tuteca = {"jshdu",True,7263,183,82,False} 
-estas,cuanto,tiempo,verdad,mi,pana,tu = tuteca 
+estas,cuanto,tiempo,verdad,mi,pana = tuteca 
 print(tiempo) 
     #*This prints "7263" 
  
@@ -662,10 +662,10 @@ prove_dict_two = {
  
 #This method works taking in the first parameter an iterable that will be used for define the keys of the dict were we are aplying the method, the second and next parameters works like the value of the keys in first parameter 
  
-resulpe = dict.fromkey(['hi','bro'],"Angel","Molina") 
+resulpe = dict.fromkeys(['hi','bro']) 
 print(resulpe) 
     #*This prints the dict with the keys and other values. 
- 
+
  
  
 #*FOR LOOP: 
@@ -683,7 +683,7 @@ for i in new_list:
 #*Exameple: 
  
 for num in new_dict: 
-    resulo = num + 7 
+    resulo = num + str(7) 
     print(resulo) 
  
 #ZIP FUNCTION: 
@@ -722,7 +722,6 @@ for num in enumerate(new_list):
     print(num[1]) 
      
 #*Here a better example for it: 
- 
 for num in enumerate(new_list): 
     print(f"The index it's: {num[0]}") 
     print(f"The value it's: {num[1]}") 
@@ -730,7 +729,7 @@ for num in enumerate(new_list):
 #*Little code challenge: 
  
 for num,i in enumerate(new_list): 
-    num,i = new_list 
+    num,i = new_list[0], new_list[1] 
     print(num,i) 
  
 #*ELSE IN FOR: 
@@ -809,3 +808,28 @@ for io in new_list:
 #*But here we have other way for that 
  
 new_list_two = [x*2]
+
+#* Functions in pyhton:
+
+def calculator(n1,n2):
+    r = n1 + n2
+    return r
+
+print(calculator(1,9))
+
+#*Python functions features:
+
+#At the moment that we get a function with some paramenters is possible define that parameters before run our function
+
+def set_my_name(first_name = "Angel",second_name = "Augusto",last_name="Molina",second_last_name = "Sayaverde"):
+    name = f"Your name is : {first_name} {second_name} {last_name} {second_last_name}"
+    return name
+
+new_name = set_my_name()
+print(new_name)
+
+
+#*Lambda functions in python:
+
+
+#4:47:36
