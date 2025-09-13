@@ -842,6 +842,7 @@ print(new_name)
 #Files creation:
 with open('./test_files/important_stuff.txt', 'w') as f, open('./test_files/super_important_stuff', 'w') as fxd:
     f.write("Hi to everybody")
+    fxd.write("Handshaking")
 
 #Without with 
 f = open('data.txt', 'w')
@@ -849,9 +850,8 @@ f.write('Hello')
 f.close()  # ❌ What if an error happens before this line?   
 
 #Files reading:
-with open("./test_files/important_stuff.txt", r) as f1, open('./test_files/super_important_stuff', 'r') as f2:
-    text = f.read()
+with open("./test_files/important_stuff.txt", 'r') as f1, open('./test_files/super_important_stuff', 'r') as f2:
     text2 = f2.read()
-    print(text, text2)
+    print(text2)
 
 
