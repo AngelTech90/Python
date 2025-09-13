@@ -561,7 +561,7 @@ print(single_tuple)
     #*This prints a tuple 
  
 #*FROZENSET FUNCTION: 
-#*This id basically the way that we can create a set inside a tuple: 
+#*This is basically the way that we can create a set inside a tuple: 
  
 prove_set = frozenset([62,62,"hahd"]) 
  
@@ -815,7 +815,7 @@ def calculator(n1,n2):
     r = n1 + n2
     return r
 
-print(calculator(1,9))
+print(calculator(1,545454))
 
 #*Python functions features:
 
@@ -833,3 +833,25 @@ print(new_name)
 
 
 #4:47:36
+
+#With reserved word for context management
+#with keyword make easier enclose in a single context process in our code, in general it's a fundamental and very powerful process manager inside our code, that are ideal for files management, database connections, network connections, and critic process that our code needs to do securely, no matter if process fails, context abstraction will ensure that this don't affect program flow
+
+##Here's some examples:
+
+#Files creation:
+with open('./test_files/important_stuff.txt', 'w') as f, open('./test_files/super_important_stuff', 'w') as fxd:
+    f.write("Hi to everybody")
+
+#Without with 
+f = open('data.txt', 'w')
+f.write('Hello')
+f.close()  # ❌ What if an error happens before this line?   
+
+#Files reading:
+with open("./test_files/important_stuff.txt", r) as f1, open('./test_files/super_important_stuff', 'r') as f2:
+    text = f.read()
+    text2 = f2.read()
+    print(text, text2)
+
+
